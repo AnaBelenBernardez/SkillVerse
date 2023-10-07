@@ -9,6 +9,7 @@
 
 .edit-profile h2 {
   font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: bold;
   text-align: center;
   color: #8750a5;
@@ -25,8 +26,10 @@
 .edit-profile label {
   display: block;
   margin-bottom: 0.5rem;
+  font-size: 14px;
   font-weight: bold;
   color: #000;
+  margin-top: 1rem;
 }
 
 .edit-profile textarea,
@@ -41,8 +44,11 @@
   color: #000;
   background-color: #fff;
   border: 1px solid #e2e8f0;
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   transition: border-color 0.3s ease;
+  margin-bottom: 0.5rem;
+  border-width: 1px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .edit-profile textarea:focus,
@@ -53,27 +59,25 @@
 .edit-profile input[type="URL"]:focus {
   outline: none;
   border-color: #8750a5;
+  box-shadow: 0 0 0 3px rgba(188, 164, 254, 0.45);
 }
 
 .edit-profile input[type="file"] {
   appearance: none;
 }
 
-.edit-profile button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #8750a5;
-  border: none;
+.save-changes-button {
+  text-align: center;
+  background-color: var(--accent);
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
 }
 
-.edit-profile button:hover {
+.save-changes-button:hover {
   background-color: #9991ca;
 }
 
