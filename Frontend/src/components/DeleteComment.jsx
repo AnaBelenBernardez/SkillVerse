@@ -4,6 +4,7 @@ import useServer from "../hooks/useServer";
 import { useParams } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import "./deletewhatever.css";
+import "./confirmdialog.css";
 
 function DeleteComment({ commentId, onDelete }) {
   const { delete: deleteComment, get } = useServer();
@@ -11,6 +12,7 @@ function DeleteComment({ commentId, onDelete }) {
   const [serviceOwner, setServiceOwner] = useState({});
   const [commentOwner, setcommentOwner] = useState({});
   const { user } = useAuth();
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
 
   const handleDelete = async () => {
     try {
@@ -18,6 +20,7 @@ function DeleteComment({ commentId, onDelete }) {
         url: `/service/${idService}/comments/${commentId}/delete`,
       });
       toast.success("Comentario borrado exitosamente");
+      closeConfirmDialog();
       // onDelete();
     } catch (error) {
       toast.error("Error al borrar el comentario");
@@ -50,22 +53,40 @@ function DeleteComment({ commentId, onDelete }) {
     fetchCommentOwner();
   }, []);
 
+  const openConfirmDialog = () => {
+    setShowConfirmDialog(true);
+    document.body.classList.add("no-scroll");
+  };
+
+  const closeConfirmDialog = () => {
+    setShowConfirmDialog(false);
+    document.body.classList.remove("no-scroll");
+  };
+
   return (
     <>
-      {/* {user.user.admin || serviceOwner.user_id === user.user.id ? (
-        
+      {user.user.admin || serviceOwner.user_id === user.user.id ? (
+        <>
+          <button className="delete-whatever" onClick={openConfirmDialog}>
+            Borrar comentario
+          </button>
+          {showConfirmDialog && (
+            <div className="confirm-dialog">
+              <p>¿Seguro que quieres borrar este comentario?</p>
+              <button className="confirm-delete" onClick={handleDelete}>
+                Borrar
+              </button>
+              <button className="confirm-cancel" onClick={closeConfirmDialog}>
+                Cancelar
+              </button>
+            </div>
+          )}
+        </>
       ) : (
         ""
-      )} */}
-      
-        <button className="delete-whatever"
-        onClick={handleDelete}>
-        Borrar comentario
-      </button>
+      )}
     </>
   );
 }
 
 export default DeleteComment;
-
-

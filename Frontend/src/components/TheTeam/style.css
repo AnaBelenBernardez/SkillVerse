@@ -39,7 +39,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(24, 24, 24);
   transition-duration: 0.5s;
   color: rgb(155, 155, 155);
   font-weight: 500;
@@ -114,8 +113,22 @@
   fill: rgb(14, 14, 14);
 }
 
+.socialDiv a:hover {
+  color: #8750a5;
+}
+
+.socials:hover path {
+  fill: #8750a5;
+}
+
 .our-photo {
   border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (max-width: 768px) {

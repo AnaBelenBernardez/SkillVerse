@@ -15,7 +15,11 @@ const AddService = () => {
   const { user } = useAuth();
   const { post } = useServer();
   const [isLoading, setIsLoading] = useState(false);
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
+
+  const handleToggleForm = () => {
+    setShowForm(!showForm);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -56,7 +60,7 @@ const AddService = () => {
         config
       );
 
-      if (response?.status === 200) {
+      if (response.status === 200) {
         toast.success(`Servicio ${title} creado con éxito`);
         setTitle("");
         setDescription("");
@@ -71,8 +75,6 @@ const AddService = () => {
       if (error.response) {
         console.log(error.response.data);
         toast.error(error.response.data.message);
-        setIsLoading(false);
-        setShowForm(true);
       } else {
         toast.error(`No se ha podido generar el servicio. ${error}`);
       }
@@ -81,6 +83,9 @@ const AddService = () => {
 
   return (
     <div className="add-service">
+      <button onClick={handleToggleForm}>
+        {showForm ? "Cancelar" : "Añadir servicio"}
+      </button>
       {showForm && (
         <>
           <h2 className="add-service-title">Añadir servicio</h2>

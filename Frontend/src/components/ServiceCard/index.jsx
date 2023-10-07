@@ -120,31 +120,30 @@ const ServiceCard = () => {
             <DeleteService serviceId={service.id} />
           </div>
         </div>
+        {isAuthenticated && !isDone && <AddComment />}
+        <div
+          className={`service-card-add-comments ${
+            isDone ? "null-padding" : ""
+          }`}
+        >
+          {isAuthenticated &&
+          !isDone &&
+          (userOwner === user.user.id || user.user.admin) ? (
+            <DoneCheck
+              id={service.id}
+              complete={service.complete}
+              setService={setService}
+              isLoading={isLoading}
+              handleMarkAsDone={handleMarkAsDone}
+            />
+          ) : null}
+        </div>
         <ViewComments />
         <div
           className={`service-card-view-comments ${
             !isAuthenticated ? "null-padding" : ""
           }`}
-        >
-          <div
-            className={`service-card-add-comments ${
-              isDone ? "null-padding" : ""
-            }`}
-          >
-            {isAuthenticated && !isDone && <AddComment />}
-            {isAuthenticated &&
-            !isDone &&
-            (userOwner === user.user.id || user.user.admin) ? (
-              <DoneCheck
-                id={service.id}
-                complete={service.complete}
-                setService={setService}
-                isLoading={isLoading}
-                handleMarkAsDone={handleMarkAsDone}
-              />
-            ) : null}
-          </div>
-        </div>
+        ></div>
       </div>
     </>
   );

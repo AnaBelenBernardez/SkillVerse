@@ -156,7 +156,6 @@ const EditProfile = ({ nickname }) => {
 
       setSuccessMessage("Cambios guardados exitosamente.");
     } catch (error) {
-      toast.error(error.response.data.message);
       if (error.response && error.response.status === 401) {
         window.location.href = "/login";
       }
@@ -175,7 +174,7 @@ const EditProfile = ({ nickname }) => {
             type="file"
             id="userPhoto"
             name="userPhoto"
-            // accept=".jpg, .jpeg, .png"
+            accept=".jpg, .jpeg, .png"
             onChange={handleFile}
           />
         </div>
@@ -230,7 +229,7 @@ const EditProfile = ({ nickname }) => {
               onChange={handleChange}
             />
             <FontAwesomeIcon
-              icon={passwordVisibility ? faEyeSlash : faEye}
+              icon={passwordVisibility ? faEye : faEyeSlash}
               className="password-icon"
               onClick={togglePassword}
             />

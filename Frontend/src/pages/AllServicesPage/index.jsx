@@ -1,5 +1,4 @@
 import React from "react";
-import AddService from "../../components/AddService/index.jsx";
 import ServicesList from "../../components/ServiceList/index.jsx";
 import ScrollToTop from "../../components/ScrollToTop/index.jsx";
 import useAuth from "../../hooks/useAuth.js";
@@ -12,7 +11,7 @@ function AllServicesPage() {
   return (
     <>
       <main>
-        <ServicesList />
+        <h2 className="title main-title ">SERVICIOS</h2>
         {!isAuthenticated && (
           <div className="agregar-servicios">
             <p>
@@ -28,7 +27,8 @@ function AllServicesPage() {
           </div>
         )}
         <ScrollToTop />
-        {isAuthenticated && <AddService />}
+
+        <ServicesList />
       </main>
     </>
   );

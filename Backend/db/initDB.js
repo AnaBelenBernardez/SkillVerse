@@ -27,8 +27,8 @@ const addAdmin = async (connection) => {
     [
       "admin@admin.com",
       "admin",
-      "administrador",
-      "administrador",
+      "admin",
+      "admin_admin",
       hashedDefaultPassword,
       "Soy administrador/a de esta página.",
       "../images/default_admin_avatar.png",

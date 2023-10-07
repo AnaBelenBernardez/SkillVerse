@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useServer from "../../hooks/useServer";
 import "./style.css";
+import AddService from "../AddService";
+import useAuth from "../../hooks/useAuth.js";
 
 const ServicesList = () => {
   const [services, setServices] = useState([]);
@@ -9,6 +11,7 @@ const ServicesList = () => {
   const [filteredServices, setFilteredServices] = useState("");
   const [prueba, setPrueba] = useState();
   const { get } = useServer();
+  const { isAuthenticated } = useAuth();
 
   const handleClick = (currentService) => {
     setFilteredServices(currentService);
@@ -87,7 +90,7 @@ const ServicesList = () => {
     <>
       <div className="servicios">
         <div className="container">
-          <h2 className="title main-title ">SERVICIOS</h2>
+          {isAuthenticated && <AddService />}
 
           <div className="grid-available">
             {!servicesAvailables && (

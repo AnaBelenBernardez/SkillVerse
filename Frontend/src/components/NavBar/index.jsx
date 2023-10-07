@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import HomeButton from "../HomeButton";
 import useAuth from "../../hooks/useAuth";
-import Avatar from "../Avatar";
 import "./style.css";
 import AvatarHeader from "../AvatarHeader";
 
@@ -40,24 +39,12 @@ function NavBar() {
             Cerrar sesión
           </NavLink>
         )}
-        {/* {isAuthenticated && (
-          <NavLink
-            className="animation"
-            to={{ pathname: `/profile/${user.user.user.nickname}` }}
-            state={{ from: `${user.user.user.nickname}` }}
-          >
-            Perfil
-          </NavLink>
-        )} */}
         {isAuthenticated && (
           <NavLink
-            to={{ pathname: `/profile/${user.user.user.nickname}` }} // Ruta deseada
+            to={{ pathname: `/profile/${user.user.user.nickname}` }}
             className="avatar-nav-container sin_animacion"
           >
-            <AvatarHeader
-              className="avatar-nav"
-              user={`${user.user.user.nickname}`}
-            />
+            <AvatarHeader user={`${user.user.user.nickname}`} />
           </NavLink>
         )}
       </nav>

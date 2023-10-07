@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useServer from "../../hooks/useServer";
 import "./style.css";
-import koFiIcon from "/icons/ko-fi-icon.svg";
 
 function Users() {
   const { get } = useServer();
@@ -41,18 +40,22 @@ function Users() {
               >
                 <p className="users-list-email">{user.email}</p>
               </Link>
-        {user.ko_fi && (
-                <a href={user.ko_fi} target="_blank" rel="noopener noreferrer">
+              {user.ko_fi && (
+                <a
+                  href={user.ko_fi}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  alt="Support me on Ko-fi"
+                >
                   <div className="ko-fi-container">
                     <img
                       src="/icons/ko-fi-icon.svg"
                       alt="Ko-fi"
                       className="ko-fi-icon small"
                     />
-                    </div>
-          </a>
-        )}
-
+                  </div>
+                </a>
+              )}
             </div>
           </div>
           <div className="users-list-role">
@@ -72,22 +75,6 @@ function Users() {
               </div>
             )}
           </div>
-          {/* <div className="hidden sm:flex sm:flex-col sm:items-end">
-            <p className="text-sm leading-6 text-gray-900">{user.role}</p>
-            {user.lastSeen ? (
-              <p className="mt-1 text-xs leading-5 text-gray-500">
-                Last seen{" "}
-                <time dateTime={user.lastSeenDateTime}>{user.lastSeen}</time>
-              </p>
-            ) : (
-              <div className="mt-1 flex items-center gap-x-1.5">
-                <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-                  <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                </div>
-                <p className="text-xs leading-5 text-gray-500">Online</p>
-              </div>
-            )}
-          </div> */}
           {}
         </li>
       ))}

@@ -4,7 +4,7 @@ import "./style.css";
 const Loading = () => {
   return (
     <div className="loading-container">
-      <div class="lds-heart">
+      <div className="lds-heart">
         <div></div>
       </div>
     </div>

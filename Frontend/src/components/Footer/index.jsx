@@ -8,11 +8,11 @@ const Footer = () => {
     "rewardId",
     "emoji",
     {
-      emoji: ["⚡️", "✨", "💜", "🚀"],
-      elementSize: 20,
-      elementCount: 40,
-      decay: 0.95,
-      spread: 50,
+      emoji: ["✨", "💜", "🚀"],
+      elementSize: 25,
+      elementCount: 70,
+      decay: 0.97,
+      spread: 70,
       zIndex: 999,
       position: "fixed",
     }

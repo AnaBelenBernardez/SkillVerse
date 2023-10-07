@@ -80,6 +80,8 @@ const newServiceController = async (req, res, next) => {
       message: `Services created with id ${id_services}`,
     });
   } catch (e) {
+    console.log("error desde service");
+    console.log(e);
     next(e);
   }
 };

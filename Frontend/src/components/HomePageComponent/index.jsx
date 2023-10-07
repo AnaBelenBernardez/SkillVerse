@@ -1,5 +1,5 @@
 import "react-slideshow-image/dist/styles.css";
-import { Fade, Zoom } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import "./style.css";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -23,13 +23,6 @@ const arrow = "../../../public/icons/arrow-narrow-right.png";
 
 function HomePageComponent() {
   const { isAuthenticated } = useAuth();
-  const divStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundSize: "cover",
-    height: "600px",
-  };
   return (
     <main className="home-component-main">
       <div className="home-component">
@@ -39,18 +32,13 @@ function HomePageComponent() {
         </p>
         <Link to="/services">
           <span id="div-container">
-            Descubre más <img src={arrow} width={20} />
+            Descubre más <img src={arrow} width={20} alt="arrow" />
           </span>
         </Link>
-
-        {/* Si queremos que la transición sea con zoomout */}
-        {/* <Zoom scale={0.4}></Zoom> */}
-
-        {/* Si queremos que la transición sea fadeout */}
-        <Fade arrows="" transitionDuration={1000} duration={2000}>
+        <Fade arrows="" transitionDuration={1000} duration={3500}>
           {images.map((image, index) => (
-            <div id="car-home" key={index} style={{ ...divStyle }}>
-              <img src={image} />
+            <div id="car-home" key={index}>
+              <img src={image} alt="" />
             </div>
           ))}
         </Fade>

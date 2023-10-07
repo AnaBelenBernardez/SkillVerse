@@ -75,7 +75,7 @@ function Login() {
               </label>
             </div>
 
-            <div>
+            <div className="login-div-container">
               <button type="submit">Inicia Sesión</button>
             </div>
           </form>
@@ -83,7 +83,7 @@ function Login() {
           <p>
             ¿No tienes cuenta?{" "}
             <Link to="/signup">
-              <button>Regístrate</button>
+              <button className="sign-up-from-login">Regístrate</button>
             </Link>
           </p>
         </div>

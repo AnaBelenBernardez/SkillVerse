@@ -12,7 +12,11 @@ const AddComment = () => {
   const { post } = useServer();
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
+
+  const handleToggleForm = () => {
+    setShowForm(!showForm);
+  };
 
   const getServiceIdFromURL = () => {
     const url = window.location.href;
@@ -65,18 +69,18 @@ const AddComment = () => {
         }, 1000);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
-
-      setIsLoading(false);
-      setShowForm(true);
+      toast.error("No se pudo publicar el comentario");
     }
   };
 
   return (
     <div className="add-comment">
+      <button onClick={handleToggleForm}>
+        {showForm ? "Cancelar" : "Añadir comentario"}
+      </button>
       {showForm && (
         <>
-          <h2 className="title">Añadir comentarios</h2>
+          <h2 className="title">Añadir comentario</h2>
           <form onSubmit={handleSubmit} className="form">
             <div className="comment">
               <label className="label">Comentario:</label>
