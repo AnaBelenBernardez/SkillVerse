@@ -75,6 +75,7 @@
   font-weight: bold;
   padding: 1rem 1rem;
   margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .save-changes-button:hover {

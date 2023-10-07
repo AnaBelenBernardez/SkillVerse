@@ -17,7 +17,8 @@
   font-size: 18px;
 }
 
-.confirm-delete {
+.confirm-delete,
+.confirm-done {
   margin: 5px;
   padding: 10px 20px;
   border: none;
@@ -27,6 +28,11 @@
   font-weight: bold;
   color: #fff;
   border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-done:hover {
+  background-color: #17a854;
 }
 
 .confirm-delete:hover {
@@ -43,6 +49,7 @@
   font-weight: bold;
   color: #fff;
   border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
 }
 
 .confirm-cancel:hover {

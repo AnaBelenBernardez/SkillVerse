@@ -44,6 +44,7 @@
   border-radius: 0.375rem;
   background-color: #8750a5;
   align-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .not-found button:hover {

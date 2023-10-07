@@ -1,20 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style.css";
+import "../../components/confirmdialog.css";
 
-function DoneCheck({ complete, setComplete, handleMarkAsDone }) {
+function DoneCheck({ handleMarkAsDone }) {
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleClick = async () => {
+  const handleClick = () => {
+    setShowConfirmDialog(true);
+  };
+
+  const handleConfirm = async () => {
     setIsLoading(true);
     await handleMarkAsDone();
     setIsLoading(false);
+    setShowConfirmDialog(false);
+  };
+
+  const handleCancel = () => {
+    setShowConfirmDialog(false);
   };
 
   return (
-    <div className="button-done">
-      <button className="publish-comment" onClick={handleClick}>
+    <div className="">
+      <button
+        className="publish-comment"
+        onClick={handleClick}
+        disabled={isLoading}
+      >
         Marcar como hecho
       </button>
+      {showConfirmDialog && (
+        <div className="confirm-dialog">
+          <p>¿Estás seguro de que quieres marcar este servicio como hecho?</p>
+          <div className="confirm-dialog-buttons">
+            <button className="confirm-done" onClick={handleConfirm}>
+              Confirmar
+            </button>
+            <button className="confirm-cancel" onClick={handleCancel}>
+              Cancelar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
