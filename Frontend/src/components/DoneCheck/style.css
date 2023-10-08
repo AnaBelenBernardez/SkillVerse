@@ -1,6 +1,4 @@
-.button-done {
-  display: flex;
-  justify-content: center;
+#button-done {
   margin-top: 20px;
 }
 

@@ -59,14 +59,16 @@ function DeleteService({ serviceId, onDelete }) {
             Borrar servicio
           </button>
           {showConfirmDialog && (
-            <div className="confirm-dialog">
-              <p>¿Seguro que quieres borrar este servicio?</p>
-              <button className="confirm-delete" onClick={handleDelete}>
-                Borrar
-              </button>
-              <button className="confirm-cancel" onClick={closeConfirmDialog}>
-                Cancelar
-              </button>
+            <div className="modal-overlay">
+              <div className="confirm-dialog">
+                <p>¿Seguro que quieres borrar este servicio?</p>
+                <button className="confirm-delete" onClick={handleDelete}>
+                  Borrar
+                </button>
+                <button className="confirm-cancel" onClick={closeConfirmDialog}>
+                  Cancelar
+                </button>
+              </div>
             </div>
           )}
         </>

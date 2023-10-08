@@ -16,6 +16,7 @@
 
 .about > p {
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .about h3 {
