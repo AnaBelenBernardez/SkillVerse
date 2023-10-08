@@ -87,21 +87,21 @@ const ServiceCard = () => {
           <div className="service-card-type">
             <p>{service.service_type}</p>
           </div>
-          <div className="service-card-info">
+          <div className="service-card-all-info">
             <Link to={`/user/${userData.nickname}`} />
             <div className="service-card-photo">
               <Link to={`/user/${userData.nickname}`}>
                 <img
-                  className="fotico"
+                  className="service-user-photo"
                   src={userData.userPhoto}
                   alt={`Foto de perfil de ${userData.nickname}`}
                 />
               </Link>
             </div>
             <div className="service-card-info">
-              <h1>{service.title}</h1>
               <Link to={`/user/${userData.nickname}`}>
                 <p
+                  id="service-nickname"
                   className={`nickname ${
                     userData.nickname === service.title ? "underline" : ""
                   }`}
@@ -109,6 +109,7 @@ const ServiceCard = () => {
                   {`${userData.nickname}`}
                 </p>
               </Link>
+              <h1>{service.title}</h1>
 
               <p className="delete-service">{service.request_body}</p>
               {service.file_name !== "" && (
@@ -116,25 +117,25 @@ const ServiceCard = () => {
                   <img src="/icons/download.png" /> {/* /icons/paperclip.png*/}
                 </a>
               )}
+              <div
+                className={`service-card-buttons ${
+                  isDone ? "null-padding" : ""
+                }`}
+              >
+                {isAuthenticated &&
+                !isDone &&
+                (userOwner === user.user.id || user.user.admin) ? (
+                  <DoneCheck
+                    id={service.id}
+                    complete={service.complete}
+                    setService={setService}
+                    isLoading={isLoading}
+                    handleMarkAsDone={handleMarkAsDone}
+                  />
+                ) : null}
+                <DeleteService serviceId={service.id} />
+              </div>
             </div>
-            <div
-              className={`service-card-add-comments ${
-                isDone ? "null-padding" : ""
-              }`}
-            >
-              {isAuthenticated &&
-              !isDone &&
-              (userOwner === user.user.id || user.user.admin) ? (
-                <DoneCheck
-                  id={service.id}
-                  complete={service.complete}
-                  setService={setService}
-                  isLoading={isLoading}
-                  handleMarkAsDone={handleMarkAsDone}
-                />
-              ) : null}
-            </div>
-            <DeleteService serviceId={service.id} />
           </div>
         </div>
         {isAuthenticated && !isDone && <AddComment />}

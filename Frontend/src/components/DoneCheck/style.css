@@ -1,7 +1,3 @@
-#button-done {
-  margin-top: 20px;
-}
-
 .publish-comment {
   background-color: #8750a5;
   color: #fff;
@@ -13,5 +9,5 @@
 }
 
 .publish-comment:hover {
-  background-color: #9991ca;
+  background-color: #17a854;
 }

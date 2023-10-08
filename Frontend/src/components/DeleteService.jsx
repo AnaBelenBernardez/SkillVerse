@@ -56,7 +56,11 @@ function DeleteService({ serviceId, onDelete }) {
       (user.user.admin || serviceOwner.user_id === user.user.id) ? (
         <>
           <button className="delete-whatever" onClick={openConfirmDialog}>
-            Borrar servicio
+            <img
+              className="trash-icon-button"
+              src={"/icons/trash.svg"}
+              alt="trash"
+            />
           </button>
           {showConfirmDialog && (
             <div className="modal-overlay">

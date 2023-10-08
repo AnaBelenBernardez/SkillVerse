@@ -32,7 +32,11 @@ function DoneCheck({ handleMarkAsDone }) {
         disabled={isLoading}
         id="button-done"
       >
-        Marcar como hecho
+        <img
+          className="check-icon-button"
+          src={"/icons/check-circle-white.png"}
+          alt="check"
+        />
       </button>
       {showConfirmDialog && (
         <div className="modal-overlay">

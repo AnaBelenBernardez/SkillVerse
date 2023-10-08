@@ -32,7 +32,8 @@ function HomePageComponent() {
         </p>
         <Link to="/services">
           <span id="div-container">
-            Descubre más <img src={arrow} width={20} alt="arrow" />
+            Descubre más
+            <img src={arrow} width={30} alt="arrow" />
           </span>
         </Link>
         <Fade arrows="" transitionDuration={1000} duration={3500}>
