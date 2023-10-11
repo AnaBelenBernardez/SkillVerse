@@ -21,8 +21,8 @@ const AvatarHeader = ({ user = "" }) => {
   }, []);
 
   return (
-    <div className="avatar-container">
-      <div>
+    <div>
+      <div className="avatar-container">
         <img
           className="avatarHeader"
           src={userAvatar}

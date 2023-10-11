@@ -29,7 +29,7 @@
 }
 
 #div-container {
-  display: flex;
+  display: inline-flex;
   align-content: center;
   justify-content: center;
   cursor: pointer;
@@ -38,7 +38,7 @@
 }
 
 #div-container:hover > img {
-  animation: arrowAnimation 1s ease-out infinite;
+  animation: arrowAnimation 1.5s ease-out infinite;
 }
 
 #car-home {
@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 20rem;
+  height: 18rem;
 }
 
 #car-home > img {
