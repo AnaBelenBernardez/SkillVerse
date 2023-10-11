@@ -67,8 +67,16 @@ function DeleteComment({ commentId, onDelete }) {
     <>
       {user.user.admin || serviceOwner.user_id === user.user.id ? (
         <>
-          <button className="delete-whatever" onClick={openConfirmDialog}>
-            Borrar comentario
+          <button
+            id="delete-comment"
+            className="delete-whatever"
+            onClick={openConfirmDialog}
+          >
+            <img
+              className="trash-icon-button"
+              src={"/icons/trash.svg"}
+              alt="trash"
+            />
           </button>
           {showConfirmDialog && (
             <div className="modal-overlay">

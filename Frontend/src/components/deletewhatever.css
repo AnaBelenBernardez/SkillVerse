@@ -1,15 +1,10 @@
 .delete-whatever {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
   background-color: #8750a5;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
 }
 
 .delete-whatever:hover {
@@ -17,4 +12,23 @@
 }
 
 .trash-icon-button {
+  width: 3rem;
+  border-radius: 0.35rem;
+}
+
+#delete-account {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+#delete-comment {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  gap: 2rem;
+  bottom: 1rem;
+  right: 1rem;
 }

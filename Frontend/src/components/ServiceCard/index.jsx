@@ -113,7 +113,9 @@ const ServiceCard = () => {
 
               <p className="delete-service">{service.request_body}</p>
               {service.file_name !== "" && (
-                <a href={`${service.file_name}`} download>
+                <a id="service-doc" href={`${service.file_name}`} download>
+                  {" "}
+                  Archivo adjunto
                   <img src="/icons/download.png" /> {/* /icons/paperclip.png*/}
                 </a>
               )}

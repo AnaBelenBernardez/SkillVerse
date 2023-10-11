@@ -125,12 +125,18 @@ function ViewComments() {
                         {`${commentOwner?.nickname}`}
                       </p>
                     </Link>
+                    <p className="comment-view-comment">{comment.comment}</p>
                     {comment.serviceFile !== "" && (
-                      <a href={`${comment.serviceFile}`} download>
-                        <img src="/icons/download.png" />
+                      <a
+                        id="comment-doc"
+                        href={`${comment.serviceFile}`}
+                        download
+                      >
+                        {" "}
+                        Archivo adjunto
+                        <img src="/icons/download.png" alt="download icon" />
                       </a>
                     )}
-                    <p className="comment-view-comment">{comment.comment}</p>
                     {/* No lo mostramos si el servicio esta finalizado */}
                     {user.user.admin ||
                     comment.user_id === user.user.id ||

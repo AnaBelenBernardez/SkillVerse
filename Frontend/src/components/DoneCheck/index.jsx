@@ -25,12 +25,11 @@ function DoneCheck({ handleMarkAsDone }) {
   };
 
   return (
-    <div className="">
+    <div className="done-container">
       <button
-        className="publish-comment"
+        className="button-done"
         onClick={handleClick}
         disabled={isLoading}
-        id="button-done"
       >
         <img
           className="check-icon-button"

@@ -52,7 +52,11 @@ function DeleteAccount({ user }) {
 
   return (
     <div className="flex justify-center">
-      <button className="delete-whatever" onClick={openConfirmDialog}>
+      <button
+        className="delete-whatever"
+        id="delete-account"
+        onClick={openConfirmDialog}
+      >
         Borrar cuenta
       </button>
       {showConfirmDialog && (
