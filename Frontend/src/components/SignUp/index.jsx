@@ -11,6 +11,7 @@ function SignUp() {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   const [repeatPassword, setRepeatPassword] = useState("");
   const [mainPassword, setMainPassword] = useState("");
+  const [showPasswordValidations, setShowPasswordValidations] = useState(false);
   const [passwordValidations, setPasswordValidations] = useState({
     hasUppercase: false,
     hasLowercase: false,
@@ -103,30 +104,35 @@ function SignUp() {
                       checkPasswordCriteria(event.target.value);
                     }}
                     minLength={8}
+                    onFocus={() => setShowPasswordValidations(true)}
                   />
                 </div>
               </div>
               <div className="password-indicators">
-                <p>
-                  {passwordValidations.hasUppercase
-                    ? ""
-                    : "❌ No contiene ninguna mayúscula"}
-                </p>
-                <p>
-                  {passwordValidations.hasLowercase
-                    ? ""
-                    : "❌ No contiene ninguna minúscula"}
-                </p>
-                <p>
-                  {passwordValidations.hasNumber
-                    ? ""
-                    : "❌ No contiene ningún número"}
-                </p>
-                <p>
-                  {passwordValidations.hasMinLength
-                    ? ""
-                    : "❌ No contiene mínimo 8 caracteres"}
-                </p>
+                {showPasswordValidations && (
+                  <>
+                    <p>
+                      {passwordValidations.hasUppercase
+                        ? ""
+                        : "❌ No contiene ninguna mayúscula"}
+                    </p>
+                    <p>
+                      {passwordValidations.hasLowercase
+                        ? ""
+                        : "❌ No contiene ninguna minúscula"}
+                    </p>
+                    <p>
+                      {passwordValidations.hasNumber
+                        ? ""
+                        : "❌ No contiene ningún número"}
+                    </p>
+                    <p>
+                      {passwordValidations.hasMinLength
+                        ? ""
+                        : "❌ No contiene mínimo 8 caracteres"}
+                    </p>
+                  </>
+                )}
               </div>
               <div>
                 <div>
