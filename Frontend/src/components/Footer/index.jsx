@@ -32,9 +32,8 @@ const Footer = () => {
             <span id="rewardId" className="rewardId" />
             💜
           </button>{" "}
-          para
+          para{" "}
           <Link to="https://www.hackaboss.com/" target="_blank" className="hab">
-            {" "}
             HACK A BOSS
           </Link>{" "}
           en 2023

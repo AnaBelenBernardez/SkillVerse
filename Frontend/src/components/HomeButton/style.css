@@ -7,9 +7,9 @@
 
 @media (min-width: 577px) {
   .home-button {
-    max-width: 40%;
+    max-width: 20%;
     min-width: 4rem;
     margin-right: 20px;
-    margin-left: 20px;
+    margin-left: 20rem;
   }
 }
