@@ -2,6 +2,9 @@
 
 _Proyecto para HACK A BOSS - 2023: Web donde personas que necesiten algún servicio digital puedan pedir ayuda a otros usuarios. Por ejemplo: traducir un texto, editar una foto, revisar un documento, etc. Solo necesidades que puedan realizarse mediante un fichero digital._
 
+<div align="center">
+  <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/HomeSkillverse.gif" alt="SkillVerse"></div>
+
 ## 📋 Descripción
 
 - Los usuarios anónimos pueden:
@@ -19,11 +22,17 @@ _Proyecto para HACK A BOSS - 2023: Web donde personas que necesiten algún servi
   - Eliminar su comentario.
   - Eliminar su cuenta.
 
+<div align="center">
+  <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/services.gif" alt="Services_Example"></div>
+
 ## ⚙ Inicialización
 
 Para inicializar la app debes seguir los pasos indicados en el ReadMe de la carpeta Backend y Frontend.
 
 ## 👩‍💻 Autores
+
+<div align="center">
+  <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/theTeam.gif" alt="TheTeam"></div>
 
 - [@BorjaLopz](https://github.com/BorjaLopz)
 - [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
