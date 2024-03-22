@@ -4,6 +4,15 @@ _Proyecto para HACK A BOSS - 2023: Web donde personas que necesiten algún servi
 
 <div align="center">
   <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/HomeSkillverse.gif" alt="SkillVerse"></div>
+  
+## 👩‍💻 Autores
+
+<div align="center">
+  <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/theTeam.gif" alt="TheTeam"></div>
+
+- [@BorjaLopz](https://github.com/BorjaLopz): Desarrollador Full Stack
+- [@AnaBelenBernardez](https://github.com/AnaBelenBernardez): Desarrolladora Full Stack
+- [@moirivilla](https://github.com/moirivilla): Desarrolladora Full Stack
 
 ## 📋 Descripción
 
@@ -28,15 +37,6 @@ _Proyecto para HACK A BOSS - 2023: Web donde personas que necesiten algún servi
 ## ⚙ Inicialización
 
 Para inicializar la app debes seguir los pasos indicados en el ReadMe de la carpeta Backend y Frontend.
-
-## 👩‍💻 Autores
-
-<div align="center">
-  <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/theTeam.gif" alt="TheTeam"></div>
-
-- [@BorjaLopz](https://github.com/BorjaLopz)
-- [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
-- [@moirivilla](https://github.com/moirivilla)
 
 ## 💻 Tech Stack
 
