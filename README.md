@@ -10,9 +10,10 @@ _Proyecto para HACK A BOSS - 2023: Web donde personas que necesiten algún servi
 <div align="center">
   <img src="https://github.com/AnaBelenBernardez/SkillVerse/raw/main/Frontend/public/images/theTeam.gif" alt="TheTeam"></div>
 
+- [@moirivilla](https://github.com/moirivilla): Desarrolladora Full Stack
 - [@BorjaLopz](https://github.com/BorjaLopz): Desarrollador Full Stack
 - [@AnaBelenBernardez](https://github.com/AnaBelenBernardez): Desarrolladora Full Stack
-- [@moirivilla](https://github.com/moirivilla): Desarrolladora Full Stack
+
 
 ## 📋 Descripción
 
